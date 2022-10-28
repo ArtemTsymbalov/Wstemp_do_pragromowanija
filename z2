@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //zad 0
+   /* int num;
+    cout << "enter (0-100) to check if you pased"<<endl;
+    cin >> num;
+    if (num < 0 || num>100) {
+        cout << "wrong namber";
+    }
+    else {
+        if (num < 50) {
+            cout << "you re fail your exam";
+        }
+        else {
+            cout << "you passed the exam";
+        }
+    }*/
+
+    ////zad 1
+    //int cp, cs;
+    //cout << "wpisz cene produktu" << endl;
+    //cin >> cp;
+    //cout << "wpisz cene sprzedazy" << endl;
+    //cin >> cs;
+    //if (cp <= cs) {
+    //    cout << "zyck"<<endl << cs-cp<< endl;
+    //}
+    //else {
+    //    cout << "strata" << endl << cp - cs << endl;
+    //}
+
+    ////zad2
+    //int rok;
+    //cout << "wpisz rok" << endl;
+    //cin >> rok;
+    //if (rok % 4 == 0 and rok%100!=0 or rok%400==0) {
+    //    cout << "rok jest przestepny" << endl;
+    //}
+    //else {
+    //    cout << "rok nie jest przestepny" << endl;
+    //}
+    
+    //zad 3
+    int god, godwp, ngod;
+    string ampm;
+    cout << "wpisz godzine" << endl;
+    cin >> god;
+    cout << "am czy pm?" << endl;
+    cin >> ampm;
+    cout << "ile godzin w przod?" << endl;
+    cin >> godwp;
+    if (ampm == "am" and god + godwp>12) {
+        ampm = "pm";
+    }
+    if (ampm == "pm" and god + godwp > 12) {
+        ampm = "am";
+    }
+    cout << ampm;
+    ngod = (god + godwp) % 12;
+    if (god >= 0 and god<12 and ampm == "am" and ampm == "pm") {
+        cout << "nowa godzina"<<ngod<< ampm << endl;
+    }
+    else {
+        cout << "nie poprawna godzina" << endl;
+    }
+}
