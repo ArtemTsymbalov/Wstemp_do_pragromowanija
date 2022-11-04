@@ -1,4 +1,8 @@
-//zad0
+#include <iostream>
+using namespace std;
+int main()
+{
+    //zad0
     int n;
     bool isPrime = true;
     cout << "enter a number" << endl;
