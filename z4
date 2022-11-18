@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	//zad1
+	int b[5]={1,2,3,4,5};
+	for (int a = 0; a<5; a++) {
+		cout << b[a]<<" ";
+	}
+	cout << endl;
+	//zad2
+	int parzyte[5] = { 2,4,6,8,10 };
+	cout <<"length of an array:" << sizeof(parzyte) / sizeof(int) << endl;
+
+	//zad3
+	int c[20];
+	int sum=0;
+	srand(time(NULL));
+	for (int i = 0; i < 20; i++) {
+		c[i]=rand()%101;
+		sum = sum + c[i];
+	}
+	cout << sum;
+}
