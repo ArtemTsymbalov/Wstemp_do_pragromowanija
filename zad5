@@ -62,17 +62,19 @@ int main()
 		a[i] = rand() % 4;
 		cout<<i<<"a:" << a[i] << " ";
 	}
-
+	cout << endl;
 	int b[20];
 	for (int i = 0; i < 20; i++) {
 		b[i] = rand() % 4;
 		cout<<i<<"b:" << b[i] << " ";
 	}
+	cout << endl;
 	int d[20];
 	for (int i = 0; i < 20; i++) {
 		d[i] = rand() % 4;
 		cout<<i << "d:" << d[i] << " ";
 	}
+	cout << endl;
 	int c[20];
 	for (int i = 0; i < 20; i++) {
 		c[i] = rand() % 101;
@@ -93,5 +95,12 @@ int main()
 	//zad4
 	cout << "zad4" << endl;
 	zad4(a,b,d);
+	cout << endl;
+	//zad5
+	cout << "zad4" << endl;
+	cout << "wpisz ciag znakuw" << endl;
+	string ciag;
+	cin >> ciag;
+	zad5(ciag);
 	cout << endl;
 }
