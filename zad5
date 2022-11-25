@@ -32,6 +32,18 @@ void zad4(int tab1[], int tab2[], int tab3[]) {
 			cout<< i<<" ";
 		}
 	}
+	cout << endl;
+	for (int i = 0; i < 20; i++) {
+		if (tab1[i] == tab2[i] and tab2[i] == tab3[i]) {
+			cout << i << " ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < 20; i++) {
+		if (tab1[i] != tab2[i] and tab2[i] != tab3[i]) {
+			cout << i << " ";
+		}
+	}
 	return;
 }
 void zad5(int argument[]) {
