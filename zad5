@@ -1,0 +1,85 @@
+#include <iostream>
+
+using namespace std;
+void zad1(int argument[]) {
+	int sum=0;
+	for (int i=0; i < 20; i++) {
+		sum = sum + argument[i];
+	}
+	cout << sum;
+}
+void zad2(int argument[]) {
+	int ilosc=0;
+	for (int i = 0; i < 20; i++) {
+		if (argument[i]%2==0) {
+			ilosc = ilosc + 1;
+		}
+	}
+	cout << ilosc;
+}
+void zad3(int argument[]) {
+	int big = argument[0];
+	for (int i = 0; i < 20; i++) {
+		if (big < argument[i]) {
+			big = argument[i];
+		}
+	}
+	cout << big;
+}
+void zad4(int tab1[], int tab2[], int tab3[]) {
+	for (int i = 0; i < 20; i++) {
+		if (tab1[i] == tab2[i] or tab2[i] == tab3[i]) {
+			cout<< i<<" ";
+		}
+	}
+	return;
+}
+void zad5(int argument[]) {
+	int sum = 0;
+	for (int i = 0; i < 20; i++) {
+		sum = sum + argument[i];
+	}
+	cout << sum;
+}
+int main()
+{
+    //zad1
+	int a[20];
+	srand(time(NULL));
+	for (int i = 0; i < 20; i++) {
+		a[i] = rand() % 4;
+		cout<<i<<"a:" << a[i] << " ";
+	}
+
+	int b[20];
+	for (int i = 0; i < 20; i++) {
+		b[i] = rand() % 4;
+		cout<<i<<"b:" << b[i] << " ";
+	}
+	int d[20];
+	for (int i = 0; i < 20; i++) {
+		d[i] = rand() % 4;
+		cout<<i << "d:" << d[i] << " ";
+	}
+	int c[20];
+	for (int i = 0; i < 20; i++) {
+		c[i] = rand() % 101;
+		cout<<i<<"c:" << c[i] << " ";
+	}
+	cout << endl;
+	cout <<"zad1" << endl;
+	zad1(c);
+	cout << endl;
+    //zad2
+	cout <<"zad2" << endl;
+	zad2(c);
+	cout << endl;
+    //zad3
+	cout << "zad3" << endl;
+	zad3(c);
+	cout << endl;
+	//zad4
+	cout << "zad4" << endl;
+	zad4(a,b,d);
+	cout << endl;
+}
