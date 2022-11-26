@@ -1,17 +1,16 @@
 #include <iostream>
-
 using namespace std;
 void zad1(int argument[]) {
-	int sum=0;
-	for (int i=0; i < 20; i++) {
+	int sum = 0;
+	for (int i = 0; i < 20; i++) {
 		sum = sum + argument[i];
 	}
 	cout << sum;
 }
 void zad2(int argument[]) {
-	int ilosc=0;
+	int ilosc = 0;
 	for (int i = 0; i < 20; i++) {
-		if (argument[i]%2==0) {
+		if (argument[i] % 2 == 0) {
 			ilosc = ilosc + 1;
 		}
 	}
@@ -28,79 +27,84 @@ void zad3(int argument[]) {
 }
 void zad4(int tab1[], int tab2[], int tab3[]) {
 	for (int i = 0; i < 20; i++) {
-		if (tab1[i] == tab2[i] or tab2[i] == tab3[i]) {
-			cout<< i<<" ";
-		}
-	}
-	cout << endl;
-	for (int i = 0; i < 20; i++) {
-		if (tab1[i] == tab2[i] and tab2[i] == tab3[i]) {
+		if (tab1[i] == tab2[i] or tab1[i] == tab3[i] or tab2[i] == tab3[i]) {
 			cout << i << " ";
 		}
 	}
 	cout << endl;
 	for (int i = 0; i < 20; i++) {
-		if (tab1[i] != tab2[i] and tab2[i] != tab3[i]) {
+		if (tab1[i] == tab2[i] and tab1[i] == tab3[i] and tab2[i] == tab3[i]) {
+			cout << i << " ";
+		}
+	}
+	cout << endl;
+	for (int i = 0; i < 20; i++) {
+		if (tab1[i] != tab2[i] and tab1[i] == tab3[i] and tab2[i] != tab3[i]) {
 			cout << i << " ";
 		}
 	}
 	return;
 }
-void zad5(int argument[]) {
-	int sum = 0;
-	for (int i = 0; i < 20; i++) {
-		sum = sum + argument[i];
+void zad5(string znak) {
+	int a = 0, b = 0;
+	for (int i = 0; i < znak.size(); i++) {
+		if ((znak[i] > 'a') and (znak[i] < 'z')) {
+			a++;
+		}
+		if ((znak[i] > 'A') and (znak[i] < 'Z')) {
+			b++;
+		}
 	}
-	cout << sum;
+	cout<< a<<endl;
+	cout << b<<endl;
 }
 int main()
 {
-    //zad1
+	//zad1
 	int a[20];
 	srand(time(NULL));
 	for (int i = 0; i < 20; i++) {
 		a[i] = rand() % 4;
-		cout<<i<<"a:" << a[i] << " ";
+		cout << i << "a:" << a[i] << " ";
 	}
 	cout << endl;
 	int b[20];
 	for (int i = 0; i < 20; i++) {
 		b[i] = rand() % 4;
-		cout<<i<<"b:" << b[i] << " ";
+		cout << i << "b:" << b[i] << " ";
 	}
 	cout << endl;
 	int d[20];
 	for (int i = 0; i < 20; i++) {
 		d[i] = rand() % 4;
-		cout<<i << "d:" << d[i] << " ";
+		cout << i << "d:" << d[i] << " ";
 	}
 	cout << endl;
 	int c[20];
 	for (int i = 0; i < 20; i++) {
 		c[i] = rand() % 101;
-		cout<<i<<"c:" << c[i] << " ";
+		cout << i << "c:" << c[i] << " ";
 	}
 	cout << endl;
-	cout <<"zad1" << endl;
+	cout << "zad1" << endl;
 	zad1(c);
 	cout << endl;
-    //zad2
-	cout <<"zad2" << endl;
+	//zad2
+	cout << "zad2" << endl;
 	zad2(c);
 	cout << endl;
-    //zad3
+	//zad3
 	cout << "zad3" << endl;
 	zad3(c);
 	cout << endl;
 	//zad4
 	cout << "zad4" << endl;
-	zad4(a,b,d);
+	zad4(a, b, d);
 	cout << endl;
 	//zad5
-	cout << "zad4" << endl;
+	cout << "zad5" << endl;
 	cout << "wpisz ciag znakuw" << endl;
 	string ciag;
 	cin >> ciag;
 	zad5(ciag);
-	cout << endl;
 }
