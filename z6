@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int secondToMax(int argument[], int n) {
+    for (int i=0; i < n; i++) {
+        for (int j=0; j < n-1 ; j++) {
+            if (argument[j] > argument[j + 1]) {
+                int temp = argument[j];
+                argument[j] = argument[j + 1];
+                argument[j+1] = temp;
+            }
+        }
+    }
+    return argument[n-2];
+}
+string reversdText(string b) {
+    string reversedResil = b;
+    for (int i = 0, j = b.length() - 1; i < b.length(); i++, j--) {
+        reversedResil[i] = b[j];
+    }
+    return reversedResil;
+}
+void gcd(int a1, int a2) {
+    for (int i = 1; i < 100; i++) {
+        if (a1 % i != 0 or a2 % i != 0) {
+            cout << "The greatest common divisor of " << a1 << " and " << a2 << " is " << i+1;
+            break;
+        }
+    }
+}
+int main()
+{
+    int a[20], n=20;
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        a[i] = rand() % 101;
+        cout << i << "a:" << a[i] << " ";
+    }
+    cout << endl;
+    cout<<secondToMax(a,n);
+    cout << endl;
+    string napis;
+    cout << "enter napis" << endl;
+    cin >> napis;
+    cout << reversdText(napis);
+    cout << endl;
+    int a1, a2;
+    cout << "enter a1 licbe" << endl;
+    cin >> a1;
+    cout << "enter a2 licbe" << endl;
+    cin >> a2;
+    gcd(a1, a2);
+}
