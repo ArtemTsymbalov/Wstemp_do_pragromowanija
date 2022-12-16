@@ -1,0 +1,42 @@
+#include <iostream>
+int ileZgodnych(int tablica1[], int tablica2[], int rozmiar) {
+    int cunter=0;
+    for (int i = 0; i < rozmiar;i++) {
+        if (tablica1[i] == tablica2[i]) {
+            
+            cunter++;
+        }
+    }
+    return cunter;
+}
+
+using namespace std;
+int main()
+{
+    int n, sum=0;
+    cout << "iscert value of n: ";
+    cin >> n;
+    for (int i = 0; i <= n; i++) {
+        sum += i;
+    }
+    cout<<"the sum of all results is: " << sum<<endl;
+    int a[20];
+    srand(time(NULL));
+    for (int i = 0; i < 20; i++) {
+        a[i] = rand() % 4;
+        cout << i << "a:" << a[i] << " ";
+    }
+    int b[20];
+    for (int i = 0; i < 20; i++) {
+        b[i] = rand() % 4;
+        cout << i << "b:" << b[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 20; i++) {
+        if (a[i] == b[i]) {
+            cout << a[i]<<", " << b[i] << endl;
+        }
+    }
+    cout << ileZgodnych(a, b, 20)<<endl;
+
+}
