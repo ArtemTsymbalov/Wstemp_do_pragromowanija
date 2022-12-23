@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+//zad 0
+int sumaLiczb(int n0) {
+    if (n0 < 1) {
+        cout << "\nsum namber os: \n";
+        return 0;
+    }
+    cout << n0 << " ";
+    return n0 + sumaLiczb(n0 - 1);
+
+}
+//zad 1
+int factorial(int n1) {
+    if (n1 == 0) {
+        return 1;
+    }
+    else if(n1 < 0) {
+        cout << "nie moze byc!\n";
+        return 0;
+    }
+    else {
+        return n1 * factorial(n1 - 1);
+    }
+    
+}
+//zad 2
+int elementCiag(int n2) {
+    if (n2 == 1) {
+        return 1;
+    }
+    else if (n2 < 0) {
+        cout << "nie moze byc!\n";
+        return 0;
+    }
+    else {
+        return -n2 * elementCiag(n2 - 1)+4;
+    }
+}
+//zad 3
+int CiagFobonacciego(int n3) {
+    if (n3 == 1) {
+        return 1;
+    }
+    else if (n3 == 0) {
+        return 0;
+    }
+    else if(n3>1) {
+        return CiagFobonacciego(n3 - 1) + CiagFobonacciego(n3 - 2);
+    }
+    else {
+        cout << "\n nie moze byc!";
+        return 0;
+    }
+}
+    int main()
+{
+    //zad 0
+    int n;
+    cout << "enter namber";
+    cin >> n;
+    int result = sumaLiczb(n);
+    cout << result << endl;
+    //zad 1
+    cout << "Factorial of " << n << "!" << " is " << factorial(n) << endl;;
+    //zad 2
+    cout << "wynik dla n=" << n << " to " << elementCiag(n) << endl;
+
+    //zad 3
+    cout << "CiagFobonacciego of " << n << " is " << CiagFobonacciego(n);
+}
