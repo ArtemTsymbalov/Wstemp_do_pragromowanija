@@ -1,4 +1,5 @@
 create table назва (параметрі)
+колона int PRIMARY KEY AUTO_INCREMENT
 insert into назва таблиці (колуни) values (чим заповнити)
 FOREIGN KEY(якої колуни) REFERENCES на яку таблицю(і на яку таблицю) ON DELETE CASCADE
 ALTER TABLE назва таблиці ADD COLUMN назва колони varchar(20) DEFAULT 'czarny' AFTER якої колони;
@@ -25,6 +26,6 @@ DATEDIFF(year, '2017/08/25', '2011/08/25') різницю між двома зн
 
 SELECT*FROM таблиця1 LEFT JOIN таблиця2 ON колона = колона HAVING умова ORDER BY ASC;
 якщо без частини спільної для таблиці1 то в кінці додати WHERE таблиця2 IS NULL;
-INNER JOIN ільки спільні елеметни обох таблиць
+INNER JOIN тільки спільні елеметни обох таблиць
 CROSS JOIN кожен елемент 1 колони поеднаний з коржним елементем 2 колони
 SELF JOIN сам до себе
