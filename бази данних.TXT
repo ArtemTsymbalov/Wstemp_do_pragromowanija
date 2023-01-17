@@ -1,0 +1,30 @@
+create table назва (параметрі)
+insert into назва таблиці (колуни) values (чим заповнити)
+FOREIGN KEY(якої колуни) REFERENCES на яку таблицю(і на яку таблицю) ON DELETE CASCADE
+ALTER TABLE назва таблиці ADD COLUMN назва колони varchar(20) DEFAULT 'czarny' AFTER якої колони;
+UPDATE таблиця SET колуни = 'mryt' WHERE колнна = 1;
+DELETE FROM таблиця WHERE колона = 'spizarnia';
+ALTER TABLE таблиця DROP FOREIGN KEY колуна;
+INSERT INTO таблиця в яку додаємо (колунни)  SELECT колунни FROM таблиця з якої додаємо  WHERE rodzal='ptak';
+
+Копіювання таблиць
+CREATE TABLE tsymbalova.kreatura AS SELECT*FROM wikingowie.kreatura;
+
+SELECT*FROM kreatura WHERE nazwa LIKE '%or%' AND udzwig BETWEEN 30 AND 70;
+SELECT*FROM kreatura ORDER BY dataUr DESC LIMIT 5;
+SELECT DISTINCT колона - різні значення
+SELECT CONCAT(колона, колона) - додає два рядки разом
+колона або таблиця AS "назву яку йому даємо"
+COUNT()повертає кількість рядків
+AVG()повертає середнє значення
+SELECT ROUND (число з не цілой, на скільки чисел після коми округляємо)
+GROUP BY колона HAVING умова;
+GROUP_CONCAT(колона1 SEPARATOR ', ') ... GROUP BY колона 2; сортує все під друггу колону а все що повтрюється в 1 записуеться через кому, сепаратор щоб був після коми пробіл
+SELECT IFNULL(якщо тут не нуль то виводить його, вивдить це тільни якщо в першому нуль);
+DATEDIFF(year, '2017/08/25', '2011/08/25') різницю між двома значеннями дати в роках
+
+SELECT*FROM таблиця1 LEFT JOIN таблиця2 ON колона = колона HAVING умова ORDER BY ASC;
+якщо без частини спільної для таблиці1 то в кінці додати WHERE таблиця2 IS NULL;
+INNER JOIN ільки спільні елеметни обох таблиць
+CROSS JOIN кожен елемент 1 колони поеднаний з коржним елементем 2 колони
+SELF JOIN сам до себе
